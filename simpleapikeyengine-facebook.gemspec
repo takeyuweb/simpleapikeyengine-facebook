@@ -7,12 +7,12 @@ require "simpleapikeyengine-facebook/version"
 Gem::Specification.new do |s|
   s.name        = "simpleapikeyengine-facebook"
   s.version     = SimpleApiKeyEngineFacebook::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of SimpleApiKeyEngineFacebook."
-  s.description = "TODO: Description of SimpleApiKeyEngineFacebook."
-  s.license     = "MIT"
+  s.authors     = ['Yuichi Takeuchi']
+  s.email       = ['uzuki05@takeyu-web.com']
+  s.homepage    = 'https://github.com/takeyuweb/simpleapikeyengine'
+  s.summary     = 'Facebook Provider for simple_api_key_engine gem.'
+  s.description = 'Facebook Provider for simple_api_key_engine gem.'
+  s.license     = 'MIT'
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
@@ -22,4 +22,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'simpleapikeyengine', '~> 0.0.1'
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'rspec'
 end
