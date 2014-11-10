@@ -9,7 +9,8 @@ module SimpleApiKeyEngine::Providers
     end
 
     def client
-      @oauth ||= Koala::Facebook::OAuth.new(ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'])
+      @oauth ||= Koala::Facebook::OAuth.new(SimpleApiKeyEngine.configuration.facebook_app_id,
+                                            SimpleApiKeyEngine.configuration.facebook_app_secret)
     end
 
     def get_auth_hash!
