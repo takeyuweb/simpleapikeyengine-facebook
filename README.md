@@ -1,4 +1,4 @@
-simple_api_key_engine_facebook
+simpleapikeyengine-facebook
 ==============================
 
-Facebook Provider for simple_api_key_engine gem.
+Facebook Provider for simpleapikeyengine gem.
