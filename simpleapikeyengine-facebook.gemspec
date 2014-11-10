@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ['uzuki05@takeyu-web.com']
   s.homepage    = 'https://github.com/takeyuweb/simpleapikeyengine'
   s.summary     = 'Facebook Provider for simple_api_key_engine gem.'
-  s.description = 'Facebook Provider for simple_api_key_engine gem.'
+  s.description = '(Description for simpleapikeyengine-facebook)'
   s.license     = 'MIT'
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
