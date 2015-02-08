@@ -3,8 +3,8 @@ require 'spec_helper'
 describe SimpleApiKeyEngine::Providers::FacebookProvider do
   let(:params) do
     {
-        provider: 'facebook',
-        signed_request: 'SIGNED_REQUEST'
+        'provider' => 'facebook',
+        'signed_request' => 'SIGNED_REQUEST'
     }
   end
   let(:auth_hash) do

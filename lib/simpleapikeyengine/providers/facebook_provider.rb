@@ -4,8 +4,8 @@ require 'koala'
 module SimpleApiKeyEngine::Providers
   class FacebookProvider < AbstractProvider
     priority 5
-    def self.acceptable?(auth_hash)
-      auth_hash[:provider] == 'facebook'
+    def self.acceptable?(request)
+      request.params['provider'] == 'facebook'
     end
 
     def client
@@ -14,7 +14,7 @@ module SimpleApiKeyEngine::Providers
     end
 
     def get_auth_hash!
-      res = client.parse_signed_request(@params[:signed_request])
+      res = client.parse_signed_request(@params['signed_request'])
       short_token = client.get_access_token(res['code'])
       graph = Koala::Facebook::API.new(short_token)
       user_info = graph.get_object('me')
@@ -28,7 +28,7 @@ module SimpleApiKeyEngine::Providers
         expires = false
       end
       {
-          provider: @params[:provider],
+          provider: @params['provider'],
           uid: user_info['id'],
           credentials: {
               token: new_token['access_token'],
