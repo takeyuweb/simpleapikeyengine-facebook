@@ -37,7 +37,8 @@ module SimpleApiKeyEngine::Providers
           },
           info: {
               email: user_info['email'],
-              name: user_info['name']
+              name: user_info['name'],
+              description: user_info['bio']
           },
           extra: {
               raw_info: user_info.to_h
